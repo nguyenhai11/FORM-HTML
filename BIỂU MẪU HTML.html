@@ -1,0 +1,144 @@
+--Biểu mẫu HTML 
+- Một biểu mẫu HTML được sử dụng để thu thập thông tin đầu vào của người dùng. 
+Đầu vào của người dùng được gửi tới một máy chủ để xử lí 
+
+ví dụ 
+ 
+<!DOCTYPE html>
+<html>
+<boby>
+<h2>HTML forms</h2>
+<form action="/action_page.php">
+<label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+--Phần tử <form>
+Phần <form>tử HTML được sử dụng để tạo một biểu mẫu HTML cho đầu vào của người dùng:
+--Phần tử <input>
+Phần <input>tử HTML là phần tử biểu mẫu được sử dụng nhiều nhất.
+
+Một <input>phần tử có thể được hiển thị theo nhiều cách, tùy thuộc vào type thuộc tính
+--<input type = "text">	Hiển thị trường nhập văn bản một dòng
+<input type = "radio">	Hiển thị một nút radio (để chọn một trong nhiều lựa chọn)
+<input type = "checkbox">Hiển thị hộp kiểm (để chọn không hoặc nhiều lựa chọn)
+<input type = "submit">	Hiển thị nút gửi (để gửi biểu mẫu)
+<input type = "button">	Hiển thị một nút có thể nhấp
+
+--Trường văn bản
+=Định <input type="text">nghĩa trường nhập một dòng để nhập văn bản.
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Text input fields</h2>
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe">
+</form>
+<p>Chú ý tới các kí tự .</p>
+<p>Hãy điền đầy đủ thông tin và chúng ta có thể bắt đầu .</p>
+</body>
+</html>
+
+--Phần tử <label>
+Lưu ý việc sử dụng <label>phần tử trong ví dụ trên.
+Các <label>thẻ định nghĩa một nhãn cho nhiều yếu tố hình thức.
+Phần <label>tử này hữu ích cho người dùng trình đọc màn hình, vì trình đọc màn hình sẽ đọc to nhãn khi người dùng tập trung vào phần tử đầu vào.
+Phần <label>tử cũng giúp người dùng gặp khó khăn khi nhấp vào các vùng rất nhỏ (chẳng hạn như nút radio hoặc hộp kiểm) - bởi vì khi người dùng nhấp vào văn bản trong <label>phần tử, nó sẽ chuyển nút radio / hộp kiểm.
+Các forthuộc tính của <label>thẻ nên bằng với idthuộc tính của <input> yếu tố để ràng buộc chúng lại với nhau.
+
+==Các nút radio
+Định <input type="radio">nghĩa một nút radio.
+Các nút radio cho phép người dùng chọn MỘT trong số các lựa chọn giới hạn
+--ví dụ
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Radio Buttons</h2>
+<p>Hãy chhọn ngôn ngữ mà bạn thích :</p>
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form> 
+</body>
+</html>
+
+--Hộp kiểm
+Hộp kiểm<input type="checkbox"> xác định .
+Hộp kiểm cho phép người dùng chọn tùy chọn KHÔNG hoặc NHIỀU tùy chọn trong một số lựa chọn giới hạn.
+
+--
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Checkboxes</h2>
+<p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+<form action="/action_page.php">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <input type="submit" value="Submit">
+</form> 
+</body>
+</html>
+
+--Nút gửi
+Định <input type="submit">nghĩa một nút để gửi dữ liệu biểu mẫu đến trình xử lý biểu mẫu.
+Trình xử lý biểu mẫu thường là một tệp trên máy chủ có tập lệnh để xử lý dữ liệu đầu vào.
+Trình xử lý biểu mẫu được chỉ định trong action thuộc tính của biểu mẫu .
+<!DOCTYPE html>
+<html>
+<body>
+<h2>HTML Forms</h2>
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+</body>
+</html>
+
+--Thuộc tính tên cho <input>
+Lưu ý rằng mỗi trường đầu vào phải có một namethuộc tính được gửi.
+Nếu namethuộc tính bị bỏ qua, giá trị của trường đầu vào sẽ hoàn toàn không được gửi.
+<!DOCTYPE html>
+<html>
+<body>
+<h2>The name Attribute</h2>
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" value="John"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+<p>Notice that the value of the "First name" field will not be submitted, because the input element does not have a name attribute.</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
