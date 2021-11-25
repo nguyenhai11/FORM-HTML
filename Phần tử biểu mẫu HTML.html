@@ -1,0 +1,159 @@
+--Phần tử biểu mẫu HTML
+-- Các phần tử<form> HTML
+Phần <form>tử HTML có thể chứa một hoặc nhiều phần tử biểu mẫu sau:
+
+<input>
+<label>
+<select>
+<textarea>
+<button>
+<fieldset>
+<legend>
+<datalist>
+<output>
+<option>
+<optgroup>
+
+--Phần tử <input>
+Một trong những phần tử biểu mẫu được sử dụng nhiều nhấtlà <input> phần tử
+--Phần <input> tử có thể được hiển thị theo một số cách tùy thuộc vào type thuộc tính 
+ví dụ 
+<DOCTYPE  html>
+<html>
+<body>
+<h2>Biểu mẫu đăng nhập </h2>
+<form action="/action_page.php">
+<lable for="fname">First name:</lable><br>
+<input type="text" id="fname" name="fname">
+<br><br>
+<input type="Submit" value="Submit">
+</form>
+</body>
+</html>
+
+--Phần tử <label>
+Phần <label>tử xác định nhãn cho một số phần tử biểu mẫu.
+Phần <label>tử này hữu ích cho người dùng trình đọc màn hình, vì trình đọc màn hình sẽ đọc to nhãn khi người dùng tập trung vào phần tử đầu vào.
+Phần <label>tử cũng giúp người dùng gặp khó khăn khi nhấp vào các vùng rất nhỏ (chẳng hạn như nút radio hoặc hộp kiểm) - bởi vì khi người dùng nhấp vào văn bản trong <label>phần tử, nó sẽ chuyển nút radio / hộp kiểm.
+Các forthuộc tính của <label>thẻ nên bằng với idthuộc tính của <input> yếu tố để ràng buộc chúng lại với nhau.
+
+--Phần tử <select>
+Phần <select>tử xác định danh sách thả xuống:
+ví dụ 
+<!DOCTYPE html>
+<html>
+<body>
+<h2>The select Element</h2>
+<p>The select element defines a drop-down list:</p>
+<form action="/action_page.php">
+ <label for="cars">Choose a car:</label>
+ <select id="cars" name="cars">
+ <option value="volvo">Volvo</option>
+ <option value="saab">Saab</option>
+ <option value="fiat">Fiat</option>
+ <option value="audi">Audi</option>
+ </select>
+  <input type="submit">
+</form>
+</body>
+</html>
+
+=-Cho phép Nhiều Lựa chọn:
+--Sử dụng multiplethuộc tính để cho phép người dùng chọn nhiều giá trị:
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Allow Multiple Selections</h2>
+<p>Use the multiple attribute to allow the user to select more than one value.</p>
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+</body>
+</html>
+
+--Phần tử <textareosystem
+Phần <textarea>tử xác định trường nhập nhiều dòng (vùng văn bản):
+ ví dụ
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Textarea</h2>
+<p>The textarea element defines a multi-line input field.</p>
+<form action="/action_page.php">
+  <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+  <br><br>
+  <input type="submit">
+</form>
+</body>
+</html>
+
+--
+Phần tử <button>
+Phần <button>tử xác định một nút có thể nhấp:
+<!DOCTYPE html>
+<html>
+<body>
+<h2>The button Element</h2>
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+</body>
+</html>
+
+--Phần tử <fieldset> và <legend>
+Phần <fieldset>tử được sử dụng để nhóm dữ liệu liên quan trong một biểu mẫu.
+Phần <legend>tử xác định chú thích cho <fieldset> phần tử.
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Grouping Form Data with Fieldset</h2>
+<p>The fieldset element is used to group related data in a form, and the legend element defines a caption for the fieldset element.</p>
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+</body>
+</html>
+
+--Phần tử <datalist>
+Phần <datalist>tử chỉ định danh sách các tùy chọn được xác định trước cho một <input>phần tử.
+Người dùng sẽ thấy danh sách thả xuống gồm các tùy chọn được xác định trước khi họ nhập dữ liệu.
+Các listthuộc tính của <input>phần tử, phải tham khảo các idthuộc tính của <datalist>phần tử.
+
+ví dụ
+<!DOCTYPE html>
+<html>
+<body>
+<h2>The datalist Element</h2>
+<p>The datalist element specifies a list of pre-defined options for an input element.</p>
+<form action="/action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+<p><b>Note:</b> The datalist tag is not supported in Safari prior version 12.1.</p>
+</body>
+</html>
+
+
+
+
