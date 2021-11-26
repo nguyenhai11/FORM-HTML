@@ -1,0 +1,179 @@
+--Các loại đầu vào HTML
+Dưới đây là các kiểu đầu vào khác nhau mà bạn có thể sử dụng trong HTML:
+
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+
+--Nhập mật khẩu
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Password field</h2>
+<p>The <strong>input type="password"</strong> defines a password field:</p>
+<form action="/action_page.php">
+<label for="username">Username:</label><br>
+<input type="text" id="username" name="username"><br>
+<label for="pwd">Password:</label><br>
+<input type="password" id="pwd" name="pwd"><br><br>
+<input type="submit" value="Submit">
+</form>
+<p>The characters in a password field are masked (shown as asterisks or circles).</p>
+</body>
+</html>
+
+--Loại đầu vào Gửi
+<input type="submit">xác định một nút để gửi dữ liệu biểu mẫu đến trình xử lý biểu mẫu .
+Trình xử lý biểu mẫu thường là một trang máy chủ có tập lệnh để xử lý dữ liệu đầu vào.
+Trình xử lý biểu mẫu được chỉ định trong action thuộc tính của biểu mẫu :
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Submit Button</h2>
+<p>The <strong>input type="submit"</strong> defines a button for submitting form data to a form-handler:</p>
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+<p>If you click "Submit", the form-data will be sent to a page called "/action_page.php".</p>
+</body>
+</html>
+
+--Đặt lại loại đầu vào
+<input type="reset">xác định nút đặt lại sẽ đặt lại tất cả các giá trị biểu mẫu về giá trị mặc định của chúng:
+
+ví dụ
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Reset Button</h2>
+<p>The <strong>input type="reset"</strong> defines a reset button that resets all form values to their default values:</p>
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form> 
+<p>If you change the input values and then click the "Reset" button, the form-data will be reset to the default values.</p>
+</body>
+</html>
+
+Loại đầu vào Radio
+<input type="radio">xác định một nút radio .
+Các nút radio cho phép người dùng CHỈ chọn MỘT trong số các lựa chọn giới hạn:
+
+-ví dụ
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Radio Buttons</h2>
+
+<p>The <strong>input type="radio"</strong> defines a radio button:</p>
+
+<p>Choose your favorite Web language:</p>
+<form action="/action_page.php">
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
+
+--Hộp kiểm loại đầu vào
+<input type="checkbox">xác định một hộp kiểm .
+Hộp kiểm cho phép người dùng chọn tùy chọn KHÔNG hoặc NHIỀU tùy chọn trong một số lựa chọn giới hạn.
+
+ví dụ
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Checkboxes</h2>
+<p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+<form action="/action_page.php">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
+
+
+--Nút loại đầu vào
+<input type="button">xác định một nút :
+
+ví dụ
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Input Button</h2>
+<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+</body>
+</html>
+
+
+--Loại đầu vào Màu sắc
+Các <input type="color">được sử dụng cho các lĩnh vực đầu vào mà nên chứa một màu.
+Tùy thuộc vào sự hỗ trợ của trình duyệt, bộ chọn màu có thể hiển thị trong trường nhập liệu.
+
+--ví dụ
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Show a Color Picker</h2>
+
+<p>The <strong>input type="color"</strong> is used for input fields that should contain a color.</p>
+
+<form action="/action_page.php">
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+  <input type="submit" value="Submit">
+</form>
+
+<p><b>Note:</b> type="color" is not supported in Internet Explorer 11 or Safari 9.1 (or earlier).</p>
+
+</body>
+</html>
+
+--
+
+
+
